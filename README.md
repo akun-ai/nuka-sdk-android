@@ -1,7 +1,7 @@
 # nuka-sdk-android
 ## Nuka SDK Chatbot by Akun.ai
 
-### How to release version: 
+### How to release a new version: 
 
 This repo is using https://jitpack.io/ to release new versions by creating a new git tag:
 
@@ -25,14 +25,13 @@ allprojects {
 }
 ```
 	
-2. Add the dependency
+2. Add the dependency (check latest version in https://github.com/akun-ai/nuka-sdk-android/releases)
 
 ```
 dependencies {
 	implementation 'com.github.akun-ai:nuka-sdk-android:{version}'
 }
 ```
-Check existing versions: https://github.com/akun-ai/nuka-sdk-android/releases
 
 3. Sync Gradle
 

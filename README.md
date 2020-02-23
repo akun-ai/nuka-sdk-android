@@ -14,26 +14,28 @@ Once the tag is created and pushed, new release will be available (can take a fe
 
 ### How to implement:
 
-#### Add it in your root build.gradle at the end of repositories:
+1. Add it in your root build.gradle at the end of repositories:
 
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 	
-#### Add the dependency
+2. Add the dependency
 
 ```
 dependencies {
-		implementation 'com.github.akun-ai:nuka-sdk-android:Tag'
+	implementation 'com.github.akun-ai:nuka-sdk-android:Tag'
 }
 ```
 
-#### Start ChatBotActivity
+3. Sync Gradle
+
+4. Start ChatBotActivity
 
 ##### Kotlin
 ```
@@ -41,7 +43,7 @@ val intent = Intent(this, ChatBotActivity::class.java)
 startActivity(intent)
 ```
 
-#####Java
+##### Java
 ```
 Intent intent = new Intent(this, ChatBotActivity.class);
 startActivity(intent);

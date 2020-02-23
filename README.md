@@ -29,9 +29,10 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.akun-ai:nuka-sdk-android:Tag'
+	implementation 'com.github.akun-ai:nuka-sdk-android:{version}'
 }
 ```
+Check existing versions: https://github.com/akun-ai/nuka-sdk-android/releases
 
 3. Sync Gradle
 

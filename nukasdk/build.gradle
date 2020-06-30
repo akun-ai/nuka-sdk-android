@@ -21,7 +21,7 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            buildConfigField "String", "API_URL", '"https://nuka.raisting.co/"'
+            buildConfigField "String", "API_URL", '"https://nuka.akun.ai/"'
             buildConfigField "String", "CHAT_MESSAGE_API_AUTH_USERNAME", '"nuka_sdk_android"'
             buildConfigField "String", "CHAT_MESSAGE_API_PASSWORD", '"wNj4a%ZNqe:}jd5h"'
             buildConfigField "String", "WEBHOOK_API_AUTH_USERNAME", '"nuka_admin"'
@@ -30,7 +30,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "API_URL", '"https://nuka.raisting.co/"'
+            buildConfigField "String", "API_URL", '"https://nuka.akun.ai/"'
             buildConfigField "String", "CHAT_MESSAGE_API_AUTH_USERNAME", '"nuka_sdk_android"'
             buildConfigField "String", "CHAT_MESSAGE_API_PASSWORD", '"wNj4a%ZNqe:}jd5h"'
             buildConfigField "String", "WEBHOOK_API_AUTH_USERNAME", '"nuka_admin"'
@@ -92,7 +92,7 @@ dependencies {
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.10.0'
-    compile ('com.github.bumptech.glide:okhttp3-integration:4.10.0'){
+    implementation ('com.github.bumptech.glide:okhttp3-integration:4.10.0'){
         exclude group: 'glide-parent'
     }
     kapt 'com.github.bumptech.glide:compiler:4.10.0'

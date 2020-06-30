@@ -46,8 +46,8 @@ class DataModule {
     fun provideChatMessageService(context: Context): ChatMessageService {
         val retrofit = getRetrofitInstance(
             getAuthenticationInterceptor(
-                BuildConfig.CHAT_MESSAGE_API_AUTH_USERNAME,
-                BuildConfig.CHAT_MESSAGE_API_PASSWORD
+                BuildConfig.AKUN_SERVICES_USERNAME,
+                BuildConfig.AKUN_SERVICES_PASSWORD
             ),
             context
         )
@@ -58,8 +58,8 @@ class DataModule {
     fun provideWebhookService(context: Context): WebhookService {
         val retrofit = getRetrofitInstance(
             getAuthenticationInterceptor(
-                BuildConfig.WEBHOOK_API_AUTH_USERNAME,
-                BuildConfig.WEBHOOK_API_PASSWORD
+                BuildConfig.AKUN_SERVICES_USERNAME,
+                BuildConfig.AKUN_SERVICES_PASSWORD
             ),
             context
         )
@@ -72,7 +72,7 @@ class DataModule {
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BuildConfig.API_URL)
+            .baseUrl(BuildConfig.AKUN_BASE_URL)
             .build()
     }
 

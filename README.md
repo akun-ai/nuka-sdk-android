@@ -22,9 +22,26 @@ dependencies {
 }
 ```
 
-3. Sync Gradle
+3. Add end-point, username and password of Akun services
 
-4. Start ChatBotActivity
+```
+buildTypes {
+    debug {
+        buildConfigField "String", "AKUN_BASE_URL", '"https://mychatbot.akun.ai/"'
+        buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
+        buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
+    }
+    release {
+        buildConfigField "String", "AKUN_BASE_URL", '"https://mychatbot.akun.ai/"'
+        buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
+        buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
+    }
+}
+```
+
+4. Sync Gradle
+
+5. Start ChatBotActivity
 
 ##### Kotlin
 ```

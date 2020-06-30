@@ -1,5 +1,6 @@
 package ai.akun.nukasdk.chatbot.presentation.chatmessage.holder
 
+import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.R
 import ai.akun.nukasdk.chatbot.presentation.main.ChatMessage
 import ai.akun.nukasdk.chatbot.presentation.main.ChatMessageIntent
@@ -30,6 +31,6 @@ class RankingViewHolder(itemView: View) : ChatMessageViewHolder(itemView) {
     }
 
     private fun getTeamShieldUrl(identifier: String): String{
-        return "https://nuka.raisting.co/img/Team/$identifier.png"
+        return BuildConfig.API_URL + "img/Team/$identifier.png"
     }
 }

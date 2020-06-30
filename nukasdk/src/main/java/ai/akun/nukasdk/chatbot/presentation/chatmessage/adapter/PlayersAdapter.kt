@@ -1,5 +1,6 @@
 package ai.akun.nukasdk.chatbot.presentation.chatmessage.adapter
 
+import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.R
 import ai.akun.nukasdk.chatbot.presentation.main.Player
 import ai.akun.nukasdk.chatbot.presentation.shared.ImageLoader
@@ -57,7 +58,7 @@ class PlayersAdapter :
         }
 
         private fun getPlayerImageUrl(identifier: String): String{
-            return "https://nuka.raisting.co/img/Player/$identifier.png"
+            return BuildConfig.API_URL + "img/Player/$identifier.png"
         }
 
         private fun getAgeFromBirthDate(birthDateString: String?): String? {

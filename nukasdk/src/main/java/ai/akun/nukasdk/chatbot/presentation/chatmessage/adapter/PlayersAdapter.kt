@@ -58,7 +58,7 @@ class PlayersAdapter :
         }
 
         private fun getPlayerImageUrl(identifier: String): String{
-            return BuildConfig.API_URL + "img/Player/$identifier.png"
+            return BuildConfig.AKUN_BASE_URL + "img/Player/$identifier.png"
         }
 
         private fun getAgeFromBirthDate(birthDateString: String?): String? {

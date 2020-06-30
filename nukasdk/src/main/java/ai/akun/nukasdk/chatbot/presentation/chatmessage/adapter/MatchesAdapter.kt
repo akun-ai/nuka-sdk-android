@@ -82,7 +82,7 @@ class MatchesAdapter :
         }
 
         private fun getTeamShieldUrl(identifier: String): String{
-            return BuildConfig.API_URL + "img/Team/$identifier.png"
+            return BuildConfig.AKUN_BASE_URL + "img/Team/$identifier.png"
         }
     }
 

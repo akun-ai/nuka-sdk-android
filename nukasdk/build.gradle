@@ -21,20 +21,16 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            buildConfigField "String", "API_URL", '"https://nuka.akun.ai/"'
-            buildConfigField "String", "CHAT_MESSAGE_API_AUTH_USERNAME", '"nuka_sdk_android"'
-            buildConfigField "String", "CHAT_MESSAGE_API_PASSWORD", '"wNj4a%ZNqe:}jd5h"'
-            buildConfigField "String", "WEBHOOK_API_AUTH_USERNAME", '"nuka_admin"'
-            buildConfigField "String", "WEBHOOK_API_PASSWORD", '"nukaWebhook2019!"'
+            buildConfigField "String", "AKUN_BASE_URL", '"https://nuka.akun.ai/"'
+            buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
+            buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "API_URL", '"https://nuka.akun.ai/"'
-            buildConfigField "String", "CHAT_MESSAGE_API_AUTH_USERNAME", '"nuka_sdk_android"'
-            buildConfigField "String", "CHAT_MESSAGE_API_PASSWORD", '"wNj4a%ZNqe:}jd5h"'
-            buildConfigField "String", "WEBHOOK_API_AUTH_USERNAME", '"nuka_admin"'
-            buildConfigField "String", "WEBHOOK_API_PASSWORD", '"nukaWebhook2019!"'
+            buildConfigField "String", "AKUN_BASE_URL", '"https://nuka.akun.ai/"'
+            buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
+            buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
         }
     }
 

@@ -30,7 +30,7 @@ class RetrofitBuilder {
             var sslContext: SSLContext? = null
             try {
                 sslContext =
-                    createCertificate(context.resources.openRawResource(R.raw.raisting_co_ssl_certificate))
+                    createCertificate(context.resources.openRawResource(R.raw.akun_ssl_certificate))
             } catch (e: Exception) {
                 Timber.d(e, "Error while creating SSL context")
             }

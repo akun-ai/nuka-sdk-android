@@ -1,5 +1,6 @@
 package ai.akun.nukasdk.chatbot.presentation.chatmessage.adapter
 
+import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.R
 import ai.akun.nukasdk.chatbot.presentation.main.Match
 import ai.akun.nukasdk.chatbot.presentation.shared.ImageLoader
@@ -81,7 +82,7 @@ class MatchesAdapter :
         }
 
         private fun getTeamShieldUrl(identifier: String): String{
-            return "https://nuka.raisting.co/img/Team/$identifier.png"
+            return BuildConfig.API_URL + "img/Team/$identifier.png"
         }
     }
 

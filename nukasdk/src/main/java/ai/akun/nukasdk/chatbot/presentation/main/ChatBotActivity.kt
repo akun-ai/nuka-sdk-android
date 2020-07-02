@@ -3,6 +3,7 @@ package ai.akun.nukasdk.chatbot.presentation.main
 import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.chatbot.presentation.shared.ConnectivityReceiver
 import ai.akun.nukasdk.R
+import ai.akun.nukasdk.chatbot.data.Globals
 import ai.akun.nukasdk.chatbot.di.component.DaggerActivityComponent
 import ai.akun.nukasdk.chatbot.di.module.ActivityModule
 import ai.akun.nukasdk.chatbot.presentation.chatmessage.adapter.ChatMessagesAdapter
@@ -62,6 +63,10 @@ class ChatBotActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityRe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_bot)
+
+        Globals.akunBaseURL  = intent.getStringExtra("akunBaseURL") as String
+        Globals.akunUsername = intent.getStringExtra("akunUsername") as String
+        Globals.akunPassword = intent.getStringExtra("akunPassword") as String
 
         injectDependency()
         setUpConnectivityChecks()

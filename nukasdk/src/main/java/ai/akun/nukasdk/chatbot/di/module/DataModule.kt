@@ -2,6 +2,7 @@ package ai.akun.nukasdk.chatbot.di.module
 
 import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.chatbot.data.ChatBotDatabase
+import ai.akun.nukasdk.chatbot.data.Globals
 import ai.akun.nukasdk.chatbot.data.chatmessage.ChatMessageDao
 import ai.akun.nukasdk.chatbot.data.chatmessage.ChatMessageMapper
 import ai.akun.nukasdk.chatbot.data.chatmessage.ChatMessageRepository
@@ -46,8 +47,8 @@ class DataModule {
     fun provideChatMessageService(context: Context): ChatMessageService {
         val retrofit = getRetrofitInstance(
             getAuthenticationInterceptor(
-                BuildConfig.AKUN_SERVICES_USERNAME,
-                BuildConfig.AKUN_SERVICES_PASSWORD
+                Globals.akunUsername,
+                Globals.akunPassword
             ),
             context
         )
@@ -58,8 +59,8 @@ class DataModule {
     fun provideWebhookService(context: Context): WebhookService {
         val retrofit = getRetrofitInstance(
             getAuthenticationInterceptor(
-                BuildConfig.AKUN_SERVICES_USERNAME,
-                BuildConfig.AKUN_SERVICES_PASSWORD
+                Globals.akunUsername,
+                Globals.akunPassword
             ),
             context
         )
@@ -72,7 +73,7 @@ class DataModule {
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BuildConfig.AKUN_BASE_URL)
+            .baseUrl(Globals.akunBaseURL)
             .build()
     }
 

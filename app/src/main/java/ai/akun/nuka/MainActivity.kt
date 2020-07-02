@@ -14,7 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         openChatBot.setOnClickListener {
-            startActivity(Intent(this, ChatBotActivity::class.java))
+
+            val bundle = Bundle()
+            bundle.putString("akunBaseURL", "https://mychatbot.akun.ai/")
+            bundle.putString("akunUsername", "akun_username")
+            bundle.putString("akunPassword", "akun_password")
+
+            val intent = Intent (this, ChatBotActivity::class.java)
+            intent.putExtras(bundle)
+
+            startActivity(intent)
         }
     }
 

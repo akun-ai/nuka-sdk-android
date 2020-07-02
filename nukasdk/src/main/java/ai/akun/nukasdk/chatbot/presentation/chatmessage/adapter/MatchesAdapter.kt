@@ -2,6 +2,7 @@ package ai.akun.nukasdk.chatbot.presentation.chatmessage.adapter
 
 import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.R
+import ai.akun.nukasdk.chatbot.data.Globals
 import ai.akun.nukasdk.chatbot.presentation.main.Match
 import ai.akun.nukasdk.chatbot.presentation.shared.ImageLoader
 import ai.akun.nukasdk.chatbot.presentation.shared.UrlNavigator
@@ -82,7 +83,7 @@ class MatchesAdapter :
         }
 
         private fun getTeamShieldUrl(identifier: String): String{
-            return BuildConfig.AKUN_BASE_URL + "img/Team/$identifier.png"
+            return Globals.akunBaseURL + "img/Team/$identifier.png"
         }
     }
 

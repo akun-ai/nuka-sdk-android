@@ -18,39 +18,33 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.akun-ai:nuka-sdk-android:1.0.1'
+	implementation 'com.github.akun-ai:nuka-sdk-android:1.0.4'
 }
 ```
 
-3. Add end-point, username and password of Akun services
+3. Sync Gradle
 
-```
-buildTypes {
-    debug {
-        buildConfigField "String", "AKUN_BASE_URL", '"https://mychatbot.akun.ai/"'
-        buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
-        buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
-    }
-    release {
-        buildConfigField "String", "AKUN_BASE_URL", '"https://mychatbot.akun.ai/"'
-        buildConfigField "String", "AKUN_SERVICES_USERNAME", '"akun_username"'
-        buildConfigField "String", "AKUN_SERVICES_PASSWORD", '"akun_password"'
-    }
-}
-```
-
-4. Sync Gradle
-
-5. Start ChatBotActivity
+4. Start ChatBotActivity: Add end-point, username and password of Akun services
 
 ##### Kotlin
 ```
-val intent = Intent(this, ChatBotActivity::class.java)
+val bundle = Bundle()
+bundle.putString("akunBaseURL", "https://mychatbot.akun.ai/")
+bundle.putString("akunUsername", "akun_username")
+bundle.putString("akunPassword", "akun_password")
+
+val intent = Intent (this, ChatBotActivity::class.java)
+intent.putExtras(bundle)
+
 startActivity(intent)
 ```
 
 ##### Java
 ```
 Intent intent = new Intent(this, ChatBotActivity.class);
+intent.putExtra("akunBaseURL", "https://mychatbot.akun.ai/");
+intent.putExtra("akunUsername", "akun_username");
+intent.putExtra("akunPassword", "akun_password");
+
 startActivity(intent);
 ```

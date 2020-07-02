@@ -2,6 +2,7 @@ package ai.akun.nukasdk.chatbot.presentation.chatmessage.adapter
 
 import ai.akun.nukasdk.BuildConfig
 import ai.akun.nukasdk.R
+import ai.akun.nukasdk.chatbot.data.Globals
 import ai.akun.nukasdk.chatbot.presentation.main.Player
 import ai.akun.nukasdk.chatbot.presentation.shared.ImageLoader
 import ai.akun.nukasdk.chatbot.presentation.shared.inflate
@@ -58,7 +59,7 @@ class PlayersAdapter :
         }
 
         private fun getPlayerImageUrl(identifier: String): String{
-            return BuildConfig.AKUN_BASE_URL + "img/Player/$identifier.png"
+            return Globals.akunBaseURL + "img/Player/$identifier.png"
         }
 
         private fun getAgeFromBirthDate(birthDateString: String?): String? {
